@@ -1,0 +1,19 @@
+﻿{
+  "Q3": [
+    {
+      "filename": "문제3-1.wav",
+      "begin": 0.83,
+      "end": 3.15
+    },
+    {
+      "filename": "문제3-2.wav",
+      "begin": 0.84,
+      "end": 3.15
+    },
+    {
+      "filename": "문제3-3.wav",
+      "begin": 0.71,
+      "end": 2.38
+    }
+  ]
+}
