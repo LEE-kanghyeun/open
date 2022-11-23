@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web framework for perfectionists with deadlines.</title>
+    <link rel = 'stylesheet' href = 'style.css'>
+    <link rel = 'stylesheet' href = 'normalize.css'>
+</head>
+<body>
+    <header class="header">
+        
+        <div class="title">
+            <div class="logos">
+                
+                <img src= 'https://static.djangoproject.com/img/logo-django.42234b631760.svg', alt='django!'>
+                <div class="logos-desc">
+                    Django The web framework <br>
+                    for perfectionists with deadlines.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="list">
+            <ul class="banner-list">
+                <li class="list-items"><a href="http://">Overview</a></li>
+                <li class="list-items"><a href="http://">Download</a></li>
+                <li class="list-items"><a href="http://">Document</a></li>
+                <li class="list-items"><a href="http://">News</a></li>
+                <li class="list-items"><a href="http://">Community</a></li>
+                <li class="list-items"><a href="http://">Code</a></li>
+                <li class="list-items"><a href="http://">About</a></li>
+                <li class="list-items"><a href="http://">Donate</a></li>  
+            </ul>
+        </div>
+
+    </header>
+
+   <div class="main">
+        <div class="main-hero">
+            <div class="main-hero-desc">
+                Django makes it easier to build better Web apps more quickly and with less code.
+                <a href="/" class="main-hero-linkbox">Get started with Django</a>
+            </div>
+
+        </div>
+
+        <div class="main-content">
+            <div class="content-title">
+                <p id="content-title-name">Stay in the loop </p>
+                <p class =  'content-title-desc'>
+                    Subscribe to one of our mailing lists to stay up 
+                    to date with everything in the Django community:
+                </p>
+                <div class="content1">
+                    <p class="content1-name">
+                         Using Django
+                    </p>  
+                    <p class="content1-desc">
+                    Get help with Django and follow announcements.
+                    </p>
+                    <form class = 'enter-email'>
+                        <button type = 'submit' class = 'mailing-form-btn'>
+                            submit
+                        </button>
+                        <label for = 'mailing1'>'go'</label>
+                        <input type = 'email' id = 'mailing1' placeholder = 'Enter E-mail'></form>
+                        
+                    </form>
+                </div>
+
+                <div class="content2">
+                    <p class="content2-name">
+                        Contributing to Django
+                    </p>
+                    
+                
+                <p class="content2-desc">
+                    Contribute to the development of Django itself.
+                </p>
+                <form class = 'enter-email'>
+                    <button type = 'submit' class = 'mailing-form-btn'>
+                        submit
+                    </button>
+                    <label for = 'mailing1'>'go'</label>
+                    <input type = 'email' id = 'mailing1' placeholder = 'Enter E-mail'></form>
+                    
+                </form>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side-content">
+            <div class='side-content'>
+                <div class="container-side-cta">
+                    <a href="" class="side-cta">
+                        Download <em>latest release: 2.1.7</em>
+                    </a>
+                    <a href="" class="more">
+                        Django documentation
+                    </a>
+                </div>
+
+
+                <div class="infos latest-news">
+                    <h2 class="infos-title">
+                        Latest news
+                    </h2>
+
+                    <div class="news-article">
+                        <h3 class="news-title">
+                            Django bugfix releases: 2.1.7, 2.0.12 and 1.11.20
+                        </h3>
+                        <p class="news-desc">
+                            Today the Django project issued bugfix releases for the 2.1, 2.0
+            and 1.11 release series.
+                        </p>
+                        <p class="news-meta">
+                            Posted by <span>Carlton Gibson</span> on
+                            <time datetime="2019-02-11">2월 11, 2019</time>
+                        </p>
+                    </div>
+                    <a href="" class="more">
+                        More news
+                    </a>
+                </div>
+                
+                <div class="infos get-involved">
+                    <h2 class="infos-title">
+                        Get involved
+                    </h2>
+
+                    <dl class="list-communities">
+                        <dt class="community-title">
+                            #django IRC channel
+                        </dt>
+                        <dd class="communuty-desc1">
+                            Chat with other Django user
+                        </dd>
+                        <dt class="community-title">
+                            Ticket system
+                        </dt>
+                        <dd class="communuty-desc2">
+                            Report bugs and make feature requests
+                        </dd>
+                  
+                    </dl>
+                    <a href="" class="more">
+                        Inside the django community
+                    </a>
+                </div>
+
+            </div>
+            
+        </div>
+        <p class = 'blank'></p>
+     <!-- main content와 side content를 main에 포함시키기 위해 일부러 main div안에<p>를 생성함.
+     <p> 즉, blank 클래스에 clear: both를 해줌으로써 main content와 side content를 main에 포함시킴 -->
+      
+
+   </div>
+
+   <div class="footer">
+    
+    Download 
+
+   </div>
+
+
+</body>
+</html>

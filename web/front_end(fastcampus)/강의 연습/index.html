@@ -1,0 +1,191 @@
+<!-- liver server 미작동시 개선 방법 :  user Local Ip 항목에 체크 -->
+<!-- https://velog.io/@graphicnovel/VScode-Live-Server-%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B0%80-%EC%9E%91%EB%8F%99%ED%95%98%EC%A7%80-%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95 -->
+
+<!-- html 자동완성 단축키 정리 -->
+<!-- https://curryyou.tistory.com/262//   -->
+<!-- https://qdgbjsdnb.tistory.com/161/ -->
+<!-- https://docs.emmet.io/cheat-sheet/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> DjangoThe web framework for perfectionists with deadlines | Django </title>
+        <link rel=' stylesheet' href='style.css'>
+        <link rel=' stylesheet' href='normalize.css'>
+        <!-- 아래는 폰트를 위해 https://fonts.google.com/specimen/Roboto 에서 폰트 불러온 코드 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1 class = "logos">
+                    <img src = 'https://static.djangoproject.com/img/logo-django.42234b631760.svg',
+                    alt = 'django!!'>                  <!-- alt : 이미지 소스 오류시, 대체할 문구-->
+                </h1>
+                <nav class = 'nav'>
+                    <ul class = 'list'>
+                        <!-- (li.list-items>a:link)*8   : emmet 활용법-->
+                        <li class="list-items"><a href="http://">Overview</a></li>
+                        <li class="list-items"><a href="http://">Download</a></li>
+                        <li class="list-items"><a href="http://">Document</a></li>
+                        <li class="list-items"><a href="http://">News</a></li>
+                        <li class="list-items"><a href="http://">Community</a></li>
+                        <li class="list-items"><a href="http://">Code</a></li>
+                        <li class="list-items"><a href="http://">About</a></li>
+                        <li class="list-items"><a href="http://">Donate</a></li>  
+                    </ul>
+                </nav>
+             </div>
+        </header>
+
+        <main class="main"> 메인토탈
+            <div class='hero-section'> 
+                <p class= 'intro-desc'>
+                    Django makes it easier to build better Web apps<br>
+                    more quickly and with less code
+                </p>
+                <a href='#' class = 'cta'>
+                    Get started with Django!
+                </a>
+
+                <div class="container">
+                    
+                </div>
+            </div>
+            <div class="container-float"> 
+                
+                <div class='main-content'>
+                    <h2 class="main-title">
+                        Stay in the loop
+                    </h2>
+                    <p class="main-desc">
+                        subscribe to one of our mailing lists to stay up yp date with everything
+                    </p>
+                    <div class="mailing-layout">
+                        <div class="mailing1">
+                            Using Django
+                            <h3 class="mailing-title">
+                                <a>Get help with Django and follow announcements</a>
+                            </h3>
+
+                            <!-- form 요소 -->
+                            <form action = "#" class = 'mailing-form'>
+                                <label for = "input-following">input email in following box</label>
+                                <input type = "email" 
+                                id = "input-following" 
+                                name ="input-following"/>
+                                <button class = 'mailing-form-btn' type = 'submit' > submit </button>
+                            </form>
+
+                            <p class="mailing-desc">
+                                you can also subscribe by sending an email
+                            </p>
+                            
+                        </div>
+                   
+                        <div class="mailing2">
+                            Contributing to Django
+                            <h3 class="mailing-title">
+                                <a>contiribute to the development of Django </Datag></a>
+                            </h3>
+
+                            <!-- form 요소 -->
+                            <form action = "#" class = 'mailing-form'>
+                                <label for = "input-following"></label>
+                                <input type = "email" 
+                                id = "input-following" 
+                                name ="input-following"/>
+                                <button class = 'mailing-form-btn' type = 'submit' > submit </button>
+                            </form>
+                            <p class="mailing-desc">
+                                Before asking a question about how to contibute, read, Contributing to Django
+                            </p>
+                          
+                        </div>
+                    </div>
+                   
+                </div>
+            
+                <div class='side-content'>
+                    <div class="container-side-cta">
+                        <a href="" class="side-cta">
+                            Download <em>latest release: 2.1.7</em>
+                        </a>
+                        <a href="" class="more">
+                            Django documentation
+                        </a>
+                    </div>
+
+
+                    <div class="infos latest-news">
+                        <h2 class="infos-title">
+                            Latest news
+                        </h2>
+
+                        <div class="news-article">
+                            <h3 class="news-title">
+                                Django bugfix releases: 2.1.7, 2.0.12 and 1.11.20
+                            </h3>
+                            <p class="news-desc">
+                                Today the Django project issued bugfix releases for the 2.1, 2.0
+                and 1.11 release series.
+                            </p>
+                            <p class="news-meta">
+                                Posted by <span>Carlton Gibson</span> on
+                                <time datetime="2019-02-11">2월 11, 2019</time>
+                            </p>
+                        </div>
+                        <a href="" class="more">
+                            More news
+                        </a>
+                    </div>
+                    
+                    <div class="infos get-involved">
+                        <h2 class="infos-title">
+                            Get involved
+                        </h2>
+
+                        <dl class="list-communities">
+                            <dt class="community-title">
+                                #django IRC channel
+                            </dt>
+                            <dd class="communuty-desc1">
+                                Chat with other Django user
+                            </dd>
+                            <dt class="community-title">
+                                Ticket system
+                            </dt>
+                            <dd class="communuty-desc2">
+                                Report bugs and make feature requests
+                            </dd>
+                      
+                        </dl>
+                        <a href="" class="more">
+                            Inside the django community
+                        </a>
+                    </div>
+
+
+                    
+                </div>
+                
+            </div>
+        </main>
+
+
+        <footer class="footer">
+            FOOTER
+            <div class='links'>링크</div>
+            FOOTER
+        </footer>
+
+    </body>
+
+</html>

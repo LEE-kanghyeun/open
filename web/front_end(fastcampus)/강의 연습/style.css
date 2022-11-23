@@ -1,0 +1,303 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 공통 */
+html {
+  font-size: 10px; /* 전체적용 */
+}
+
+.body {
+  min-width: 1060px;
+  font-size: 1.8rem; /* 최상위요소인 html에서 지정된 폰트사이즈의 1.8배 , rem의 뜻,  http://triki.net/prgm/3250 */
+  line-height: 1.6;
+  font-family: Roboto, Avenir, sans-serif;
+}
+
+/* 헤더 */
+.header {
+  background-color: yellow;
+  height: 72px;
+  padding: 10px 0;
+  line-height: 5rem;
+}
+
+.header .container {
+  max-width: 1400px;
+  background-color: red;
+  margin: 0 auto 0 auto;
+  padding: 0 10px;
+  position: relative;
+}
+
+.logos {
+  position: absolute;
+  margin: 0.5rem;
+  top: 0;
+  left: 0;
+  padding: inherit;
+  /* position: absolute;가 자식요소에 있으면, header에 padding을 명시했더라도 자식요소에서 padding을 읽어오지 못하므로,
+   부모의 padding 요소를 상속받겠다고 따로 지정해준다.  */
+}
+
+.nav {
+  text-align: right;
+}
+
+li {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  /* 하이퍼링크라서 밑줄이 자동으로 그어져있는데, 이를 없앰 */
+}
+
+/* 메인 */
+.main {
+  background-color: lime;
+}
+
+.main .container {
+  max-width: 1400px;
+  background-color: wheat;
+  margin: 50px auto 50px auto;
+  padding: 10 10px;
+  position: relative;
+}
+
+.container-float {
+  max-width: 1400px;
+  background-color: peru;
+  margin: 0 auto 0 auto;
+  padding: 0px 10px;
+  position: relative;
+  /* clear: both; */
+}
+
+.container-float::after {
+  display: block;
+  content: "";
+  clear: both;
+} /* clear: both;   
+-> container-float가 main-content와 side-content를 온전히 포함하지 못하여,
+  container-float의 가상선택자(after)를 일부러 생성하여 clear both를 시킴으로써 
+   container-float가 main-content와 side-content를 포함하도록함 */
+
+.list {
+  margin: 0;
+  font-size: 0;
+  /* list-item 항목 간에 임의의 띄어쓰기가 포함되어 있어, 
+  font-size 0을 통해 띄어쓰기 제거, list-items > a의 padding:10px를 없애면 확인가능  */
+}
+.list-items {
+  display: inline-block;
+  font-size: 1.3rem;
+  text-transform: uppercase; /*문자를 대문자로 변환*/
+}
+
+.list-items > a {
+  color: white;
+  padding: 10px; /* 글씨 선택시 사용자가 약간 벗어나 외곽을 선택하여도 선택으로 인식하게끔 */
+  /* display: block; */
+}
+
+.list-items > a:hover {
+  color: skyblue;
+}
+
+.hero-section {
+  background-color: aqua;
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #cfe3dc;
+}
+
+.intro-desc {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+  font-size: 3.6rem;
+  width: 700px;
+  line-height: 1.3em;
+}
+
+.cta {
+  padding: 2em 5em;
+  background-color: lightseagreen;
+  border-radius: 8px;
+  margin-bottom: 10em;
+  font-size: 1.5rem;
+}
+
+.cta:hover {
+  background-color: mediumaquamarine;
+}
+
+.main-content {
+  background-color: grey;
+  float: left;
+  /* float : 객체를 띄워서 정렬하는 속성, 사진에다가 float를 적용하면 글자 등이 그 사진 주위로 둘러싼 형태가 됨 */
+  /* https://aboooks.tistory.com/79 */
+  /* 자매품으로는 clear가 있다. */
+  width: 70%;
+}
+
+.main-title {
+  letter-spacing: -1px;
+  /* 자간 조절 , 음수는 좁게, 양수는 넓게*/
+}
+
+.mailing1 {
+  float: left;
+  background-color: yellow;
+  width: 48%;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 3px;
+}
+
+.mailing1 > .mailing-title {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.mailing-form > label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /* -> 칸에 비해 글자수가 넘칠때, 넘어서는 부분이 튀어나오지 않도록 가림 */
+  margin: -1px;
+  /* 아예 가려 버리기 1 */
+  clip: rect(0, 0, 0, 0);
+  /* 아예 가려 버리기 2 */
+  background-color: grey;
+}
+
+/* submit 버튼을 이메일 입력 창 안에 넣기 위해
+position 설정  
+부모 요소 : relative
+자식 요소 : absolute */
+.mailing-form {
+  position: relative;
+  margin: 10px;
+}
+.mailing-form-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent; /* 투명하게 */
+  color: seagreen;
+  border: none;
+  cursor: pointer; /* 마우스 커서가 올라가면 화살표로 변경 */
+}
+.mailing-form-btn:hover {
+  background: rgb(247, 245, 245);
+}
+
+input[type="email"] {
+  /* 선택자 활용 */
+  width: 100%;
+  border: 1px solid greenyellow;
+  border-radius: 4px;
+  height: 3rem;
+  padding: 1px 50px 1px 1px; /* submit 버튼에 입력값이 써지지 못하게 padding 증가시킴 */
+}
+
+.mailing2 {
+  float: right;
+  background-color: pink;
+  width: 48%;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 3px;
+}
+
+.mailing2 > .mailing-title {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.side-content {
+  background-color: pink;
+  float: right;
+  /* float : 객체를 띄워서 정렬하는 속성, 사진에다가 float를 적용하면 글자 등이 그 사진 주위로 둘러싼 형태가 됨 */
+  /* https://aboooks.tistory.com/79 */
+  /* 자매품으로는 clear가 있다. */
+  width: 30%;
+  border-left: 1px solid #cfe3dc;
+  padding-top: 0rem;
+}
+
+.links {
+  background-color: lightblue;
+  clear: both;
+  /* float을 사용하니깐, 링크와 footer의 항목이 메인 콘텐츠의 주위를 둘러쌓거나, 옆에 있게됨 (float의 특징)
+  따라서 clear를 활용하여, 주위를 둘러싸지 못하게함. 
+  https://aboooks.tistory.com/79 예시 참조
+  */
+}
+
+.container-side-cta {
+  margin: 0rem 2rem;
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(192, 251, 218);
+  /* position: relative; */
+  height: 10rem;
+}
+
+.side-cta {
+  display: block;
+  background-color: seagreen;
+  width: 60%;
+  border-radius: 4px;
+  height: 5rem;
+
+  text-align: center;
+  left: 15rem;
+  padding: 2rem 2rem;
+  margin-left: 3rem;
+  margin-right: 3px;
+  margin-top: 5px;
+  color: white;
+  /* position: absolute; */
+}
+.side-cta:hover {
+  background-color: greenyellow;
+}
+
+.more {
+  width: 60%;
+  display: block;
+  text-transform: uppercase;
+  padding: 2rem 2rem;
+  color: seagreen;
+  margin-left: 3rem;
+  font-size: 9px;
+  /* position: absolute; */
+}
+
+.community-title:nth-child(n + 2) {
+  margin-top: 5px;
+}
+
+.infos .more {
+  display: block;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+/* 푸터 */
+.footer {
+  background-color: purple;
+  clear: both;
+  /* float을 사용하니깐, 링크와 footer의 항목이 메인 콘텐츠의 주위를 둘러쌓거나, 옆에 있게됨 (float의 특징)
+  따라서 clear를 활용하여, 주위를 둘러싸지 못하게함. 
+  https://aboooks.tistory.com/79 예시 참조
+  */
+}

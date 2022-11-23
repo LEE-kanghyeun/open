@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px; /* 전체적용 */
+}
+
+/* ###############  body - header ############### */
+.header {
+  background-color: #0c3c26;
+  height: 80px;
+}
+
+.logos {
+  margin: 1rem;
+  float: left;
+  /* background-color: gray; */
+  width: 1000px;
+  display: block;
+  padding: 1em;
+  position: relative;
+}
+
+.logos-desc {
+  color: white;
+  display: block;
+  /* background-color: thistle; */
+  width: 30%;
+  /* float: right; */
+  position: absolute;
+  left: 120px;
+  top: 10px;
+  font-size: 1.5rem;
+}
+
+.list-items {
+  display: inline-block;
+  /* background-color: hotpink; */
+  line-height: 3rem;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+.list-items > a {
+  /* display: block; */
+  color: white;
+  text-decoration: none;
+  letter-spacing: -1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.list-items > a:hover {
+  color: rgb(236, 236, 236);
+}
+
+/* ###############  body - main ############### */
+/* ###############  body - main - hero ############### */
+.main {
+  background-color: violet;
+}
+
+.main::after {
+  background-color: yellowgreen;
+}
+
+.main-hero {
+  text-align: center;
+  margin-top: 10rem;
+  border-bottom: solid 1px #44b78b;
+}
+.main-hero-linkbox {
+  background-color: #44b78b;
+  color: white;
+  padding: 3rem 1rem 1rem 1rem;
+  border-radius: 20px;
+  width: 400px;
+  height: 100px;
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 10px;
+}
+.main-hero-linkbox:hover {
+  background-color: #83f7cc;
+  color: white;
+}
+
+.main-hero-desc {
+  font-size: 3rem;
+  padding: 3rem;
+  margin: 3rem;
+}
+
+/* ###############  body - main - main_content ############### */
+.main-content {
+  max-width: 1400px;
+  background-color: peru;
+  margin: 0 auto 0 auto;
+  padding: 0px 10px;
+  float: left;
+}
+.main-content::after {
+  display: block;
+  content: "";
+}
+
+#content-title-name {
+  font-weight: bold;
+  color: black;
+  font-size: 3rem;
+  background-color: blueviolet;
+}
+
+.content-title-desc {
+  font-size: 2rem;
+  background-color: cornflowerblue;
+}
+
+.content1 {
+  float: left;
+  background-color: cornflowerblue;
+}
+.content1-name {
+  font-weight: bold;
+  color: #44b78b;
+  font-size: 2rem;
+}
+
+.content1-desc {
+  font-size: 2rem;
+}
+
+.enter-email {
+  margin: 1px;
+  border: 1px solid #44b78b;
+  border-radius: 4px;
+  width: 90%;
+  padding-right: 3px;
+  background-color: white;
+}
+
+input[type="email"] {
+  border: none;
+  height: 3rem;
+  width: 87%;
+}
+
+.enter-email::after {
+  content: "";
+  clear: both;
+  background-color: white;
+}
+
+button[type="submit"] {
+  display: block;
+  float: right;
+  padding: 5px;
+  margin-top: 3px;
+  margin-right: 3px;
+  background-color: transparent;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: whitesmoke;
+}
+
+.enter-email > label {
+  display: none;
+}
+
+.content2 {
+  float: right;
+  background-color: darkgreen;
+}
+.content2-name {
+  font-weight: bold;
+  color: #44b78b;
+  font-size: 2rem;
+}
+
+.content2-desc {
+  font-size: 2rem;
+}
+
+.side-content {
+  background-color: yellow;
+  float: right;
+}
+
+.blank {
+  clear: both;
+}
+/* main content와 side content를 main에 포함시키기 위해 일부러 main div안에<p>를 생성함. */
+/* <p> 즉, blank 클래스에 clear: both를 해줌으로써 main content와 side content를 main에 포함시킴 */

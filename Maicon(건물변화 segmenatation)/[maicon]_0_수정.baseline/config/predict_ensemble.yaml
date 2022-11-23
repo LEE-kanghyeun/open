@@ -1,0 +1,15 @@
+# System
+gpu_num: 0
+
+# Model
+train_serial: DeepLabV3Plus_resnext101_32x8d_swsl, DeepLabV3Plus_resnet152_imagenet_dataaugment
+
+# Data
+batch_size: 12
+num_workers: 4
+
+# Logging
+verbose: false
+
+# Ensemble Weight
+weight: [1,1,1]
